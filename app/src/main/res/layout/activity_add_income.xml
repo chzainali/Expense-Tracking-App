@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddIncomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/app_color"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Income"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:src="@drawable/finance_logo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/app_color"
+                    app:boxStrokeColor="@color/app_color"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/app_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter income title"
+                        android:textColor="@color/app_color"
+                        android:inputType="textEmailAddress"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/app_color"
+                    app:boxStrokeColor="@color/app_color"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/app_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter income amount"
+                        android:textColor="@color/app_color"
+                        android:inputType="numberDecimal"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/app_color"
+                    app:boxStrokeColor="@color/app_color"
+                    android:layout_marginTop="20dp"
+                    app:hintTextColor="@color/app_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter income details"
+                        android:textColor="@color/app_color"
+                        android:inputType="text"
+                        android:visibility="visible" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/app_color"
+                    android:text="Add"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="gone"
+                    android:id="@+id/btnDelete"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/app_color"
+                    android:text="Delete"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
